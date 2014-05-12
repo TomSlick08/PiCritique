@@ -1,0 +1,12 @@
+<h1>Listing Users</h1>
+
+      <h3>Name</h3>
+      <h3>Avi Photo</h3>
+   
+
+    <%= @users.each do |user| %>
+        <p><%= user.username %></p></br>
+        <p><%= user.avatar %></p>
+    <% end %>
+ 
+

@@ -1,0 +1,8 @@
+<h1><%= @user.name%>'s Profile Page</h1>
+
+<img src="<%=@user.avatar%>"> </img>
+
+<% if @user == current_user%>
+<%= link_to 'edit_user', 'edit_user_path' %>
+# <!-- List of thumbnails for This User's Albums: -->
+<% end %>
