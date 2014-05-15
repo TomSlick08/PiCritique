@@ -1,0 +1,8 @@
+
+var newComment = $("<%= j(render @comment) %>").hide();
+
+$('#comment-box').prepend(newComment);
+newComment.fadeIn(1000);
+
+//
+$("input[type='text']").val("");

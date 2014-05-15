@@ -13,6 +13,14 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
+  resources :albums do 
+    resources :photos
+  end
+  
+  resources :comments
+  
+
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

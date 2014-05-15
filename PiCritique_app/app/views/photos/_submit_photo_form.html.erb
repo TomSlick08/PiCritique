@@ -1,0 +1,16 @@
+<h2>Please upload your photo to add to this album</h2>
+<%= form_for([@album, @photo], :html => { :multipart => true }) do |f| %>
+
+  <div class="field">
+    <%= f.label :upload_photo %><br>
+    <%= f.file_field :content %>
+  </div>    
+  <div class="field">
+    <%= f.label :caption %><br>
+    <%= f.text_field :caption %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

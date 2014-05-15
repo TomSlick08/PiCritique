@@ -3,10 +3,18 @@
       <h3>Name</h3>
       <h3>Avi Photo</h3>
    
-
-    <%= @users.each do |user| %>
-        <p><%= user.username %></p></br>
-        <p><%= user.avatar %></p>
+<body>
+    <% @users.each do |user| %>
+        <p><%= user.name %></p></br>
+        <img src="<%= user.avatar %> class="avatar-thumbnail"></img>
+        <%= link_to 'View Profile', user_path(user) %>
     <% end %>
+
+    <%= link_to 'Logout', logout_path %>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'Albums Index', albums_path %>
+</body>
+
+
  
 

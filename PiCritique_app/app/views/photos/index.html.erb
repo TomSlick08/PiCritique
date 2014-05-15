@@ -1,0 +1,12 @@
+
+<% @photos.each do |photo| %>
+
+<a href="/albums/<%=params[:album_id]%>/photos/<%=photo.id%>"><img src="<%=photo.content%>" class="album-photo-thumbnail"></a>
+<p><%=photo.caption%></p>
+
+<% end %>
+
+<%= link_to 'Index of Users', users_path %>
+<%= link_to 'Home', root_path %>
+<%= link_to 'Logout', logout_path %>
+<%= link_to 'Albums Index', albums_path %>

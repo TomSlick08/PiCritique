@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	background: url(http://geewall.com/mmc_uploads/5154-light-gray-gradient-1920-1200-wallpapers.jpg);
+}
+
+header {
+	background: black;
+	height: 100px;
+	width: 100%;
+	background-size: cover !important;
+}
+
+ .comment-input {
+	height: 150px;
+	width: 500px;
+}
+
+/*html, body {
+            height: 100%;
+            overflow: hidden;
+          }*/

@@ -1,0 +1,16 @@
+<h1><%=@album.name %></h1>
+<p> Must be logged in to upload an album or leave a comment </p>
+
+<% @album.photos.each do |photo|%>
+<img src="<%=photo.content%>"> </img></br>
+<%= photo.caption %>
+
+<%end%>
+
+<%= link_to 'Add Photo', new_album_photo_path(@album) %></br>
+<%= link_to 'Photos for This Album', album_photos_path(@album) %></br>
+<%= link_to 'Index of Albums', albums_path %></br>
+<%= link_to 'Create a New Album', new_album_path %></br>
+<%= link_to 'Edit An Album', edit_album_path(@album) %></br>
+<%= link_to 'Home', root_path %></br>
+<%= link_to 'Logout', logout_path %>

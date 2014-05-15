@@ -11,10 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511211059) do
+ActiveRecord::Schema.define(version: 20140513143323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "albums", force: true do |t|
+    t.string   "name"
+    t.string   "cover_photo_file_name"
+    t.string   "cover_photo_content_type"
+    t.integer  "cover_photo_file_size"
+    t.datetime "cover_photo_updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.integer "upvotes"
+    t.string  "content"
+  end
+
+  create_table "photos", force: true do |t|
+    t.string   "name"
+    t.string   "caption"
+    t.integer  "album_id"
+    t.string   "content_file_name"
+    t.string   "content_content_type"
+    t.integer  "content_file_size"
+    t.datetime "content_updated_at"
+  end
+
+  create_table "ratings", force: true do |t|
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
