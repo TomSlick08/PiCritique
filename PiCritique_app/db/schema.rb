@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140513143323) do
   create_table "comments", force: true do |t|
     t.integer "upvotes"
     t.string  "content"
+    t.integer "photo_id"
+    t.integer "user_id"
   end
 
   create_table "photos", force: true do |t|

@@ -4,12 +4,15 @@
 
 <%# render 'comment_input' %>
 
-<div class ="comment-div">
+<div id ="comment-div">
 	<p>Leave Feedback:</p>
-	<textarea class= "comment-input">
-		
-	</textarea>
-	<%# render @comments %>
+	<button id="submit-comment"> 
+		Post Comment
+	</button>
+	<textarea id= "comment-input"></textarea>
+	<% @photo.comments.each do |comment| %>
+	<p><img class='thumbnail' src="<%= comment.user.avatar %>"><%= comment.content %></p>
+	<% end %>
 </div>
 
 <%= link_to 'Index of Users', users_path %>

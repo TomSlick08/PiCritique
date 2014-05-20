@@ -25,9 +25,19 @@ header {
 	background-size: cover !important;
 }
 
+.thumbnail {
+	height: 20px;
+}
+
  .comment-input {
 	height: 150px;
 	width: 500px;
+}
+
+#submit-comment {
+	height: 30px;
+	width 300px;
+	border-radius: 25%;
 }
 
 /*html, body {

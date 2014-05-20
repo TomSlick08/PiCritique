@@ -1,6 +1,0 @@
-var commentID = "<%= dom_id(@comment) %>";
-
-var formHTML = "<%= j(render 'comment_input') %> "
-
-$("#"+commentID).find('comment_input').remove();
-$("#"+commentID).append(formHTML);

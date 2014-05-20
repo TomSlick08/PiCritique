@@ -16,4 +16,7 @@
 //= require_tree .
 
 $(document).ready(function() {
+	$('#submit-comment').click(function(){
+		createComment();
+	});
 });

@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
 			respond_to do |format|
 				format.html { }
 				format.json { render json: @comments.to_json }
+			end
 		end
 
 		def edit 
@@ -16,16 +17,18 @@ class CommentsController < ApplicationController
 		end
 
 		def create
-			@comment = Comment.new(content: params[:comment][:content])
+			@comment = Comment.create(content: params[:content], photo_id: params[:photo_id])
+			current_user.comments << @comment
 			respond_to do |format|
-				format.html { redirect_to '/'}
+				format.html { redirect_to '/' }
 				format.js { }
-				format.json { render json: comment.to_json }
+				format.json { render json: [current_user.avatar, @comment].to_json }
+			end
 		end
 
 		def update 
 			@comment = Comment.find(params[:id])
-			@comment.update(content: params[:comment][:content])
+			@comment.update(content: params[:content])
 			respond_to do |format|
 				format.html { redirect_to @comment }
 				format.js  { }
@@ -39,6 +42,6 @@ class CommentsController < ApplicationController
 				format.html { redirect_to '/'}
 				format.js {  }
 				format.json { render json: comment.to_json }
+			end
 		end
-	end
 end

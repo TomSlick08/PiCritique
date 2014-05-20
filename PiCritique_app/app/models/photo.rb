@@ -5,6 +5,6 @@ class Photo < ActiveRecord::Base
   # validates_attachment_content_type :content, :content_type => /\Aimage\/.*\Z/
 
   belongs_to :album 
-  has_many :comments, through: :users
+  has_many :comments
   # validates :name, presence: true
 end
