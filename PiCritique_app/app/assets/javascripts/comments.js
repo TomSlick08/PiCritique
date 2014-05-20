@@ -2,6 +2,9 @@ var commentDiv = $('#comment-div');
 var textBox = $('#comment-input');
 var submitButton = $('#submit-comment');
 
+submitButton.on('click', createComment);
+
+
 function createComment () {
 	var photoID = window.location.pathname.match(/\/\d+$/)[0].replace("/","");
 	var commentText = $('#comment-input').val();

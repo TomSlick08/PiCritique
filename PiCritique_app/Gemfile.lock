@@ -142,6 +142,7 @@ DEPENDENCIES
   jquery-rails
   paperclip (~> 4.1)
   pg
+  pry
   pry-rails
   rails (= 4.1.0)
   sass-rails (~> 4.0.3)

@@ -40,6 +40,12 @@ header {
 	border-radius: 25%;
 }
 
+.banner:h1{
+	font-color: white;
+	font-size: 100px;
+	font-family: Impact;
+}
+
 /*html, body {
             height: 100%;
             overflow: hidden;

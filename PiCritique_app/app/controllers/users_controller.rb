@@ -4,12 +4,11 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
-		# @user = User.find(params[:id])
 	end
 
 	def show 
 		@user = User.find(params[:id])
-		# @albums = @user.albums
+		@albums = @user.albums
 	end
 
 	def new 
@@ -21,7 +20,6 @@ class UsersController < ApplicationController
 	end
 
 	def create
-
 		@user = User.new(user_params)
 		@user.admin = false
 		if @user.save
