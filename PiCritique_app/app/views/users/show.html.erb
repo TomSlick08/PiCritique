@@ -2,13 +2,15 @@
 
 <body>
 <div class="main-div">
-<img src="<%= @user.avatar %>" class= "showcase"> <!-- </img> -->
+<img src="<%= @user.avatar %>" class= "showcase"> 
 
 <h2> <%= @user.name %>'s Albums:</h2>
 	<% @albums.each do |album| %>
+
 		<a href ="/albums/<%=album.id%>/photos"> <img src="<%= album.cover_photo %>" class= "index-photo"> </a>
 	<% end %>
-
+</br>
+</br>
 <%= link_to 'Index of Users', users_path %>
 <%= link_to 'Home', root_path %>
 <%= link_to 'Logout', logout_path %>

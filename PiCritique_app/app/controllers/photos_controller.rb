@@ -7,6 +7,7 @@ class PhotosController < ApplicationController
 
 		def show 
 			@photo = Photo.find(params[:id])
+			# @ratings = Photo.ratings
 			# @albums = @user.albums
 		end
 
@@ -14,7 +15,6 @@ class PhotosController < ApplicationController
 		def new 
 			@album = Album.find(params[:album_id])
 			@photo = Photo.new
-
 		end
 
 		def create

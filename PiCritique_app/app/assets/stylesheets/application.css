@@ -42,8 +42,9 @@ header {
 
 #submit-comment {
 	height: 30px;
-	width 30px;
+	width 20px;
 	border-radius: 25%;
+	text-align: center;
 }
 
 .banner {
@@ -67,8 +68,7 @@ header {
 	height: 100px;
 	width: 100px;
 	border-radius: 20%;
-	margin-left: -(X/2)px;
-   margin-top: -(Y/2)px;
+	position: center;
 }
 
 .main-div {

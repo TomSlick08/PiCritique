@@ -4,12 +4,17 @@
 
 <%# render 'comment_input' %>
 
+<p>
+	<%# render 'rating_form' %>
+</p>
+
 <div id ="comment-div">
 	<p>Leave Feedback:</p>
-	<button id="submit-comment"> 
-		Post Comment
+	<textarea id= "comment-input">
+	</textarea></br>
+		<button id="submit-comment"> 
+		<p>Post Comment </p>
 	</button>
-	<textarea id= "comment-input"></textarea>
 	<% @photo.comments.each do |comment| %>
 	<p><img class='thumbnail' src="<%= comment.user.avatar %>"><%= comment.content %></p>
 	<% end %>

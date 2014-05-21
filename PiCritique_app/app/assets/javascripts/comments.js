@@ -20,7 +20,7 @@ function createComment () {
   	var userAvatarSource = data[0];
   	var currentComment = data[1];
   	var currentCommentContent = currentComment.content;
-  	var newComment = $("<p><img class='thumbnail' src=" + userAvatarSource + "'>" + currentCommentContent + "</p>");
+  	var newComment = $("<p><img class='thumbnail' src=" + userAvatarSource + ">" + currentCommentContent + "</p>");
   	$('#comment-input').val("");
   	$('#comment-div').append(newComment);
   });
