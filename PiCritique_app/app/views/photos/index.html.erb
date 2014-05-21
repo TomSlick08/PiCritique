@@ -1,7 +1,7 @@
-
+<h1><%= @album.name%> Photos:</h1>
 <% @photos.each do |photo| %>
 
-<a href="/albums/<%=params[:album_id]%>/photos/<%=photo.id%>"><img src="<%=photo.content%>" class="album-photo-thumbnail"></a>
+<a href="/albums/<%=params[:album_id]%>/photos/<%=photo.id%>"><img src="<%=photo.content%>" class="index-photo"></a>
 <p><%=photo.caption%></p>
 
 <% end %>

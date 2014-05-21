@@ -18,6 +18,10 @@ body {
 	background: url(http://geewall.com/mmc_uploads/5154-light-gray-gradient-1920-1200-wallpapers.jpg);
 }
 
+h1 {
+	text-align: center;
+}
+
 header {
 	background: black;
 	height: 140px;
@@ -26,7 +30,9 @@ header {
 }
 
 .thumbnail {
-	height: 20px;
+	height: 30px;
+	width: 30px;
+	margin: 0 auto;
 }
 
  .comment-input {
@@ -36,7 +42,7 @@ header {
 
 #submit-comment {
 	height: 30px;
-	width 300px;
+	width 30px;
 	border-radius: 25%;
 }
 
@@ -48,7 +54,24 @@ header {
 	position: center;
 }
 
-/*html, body {
-            height: 100%;
-            overflow: hidden;
-          }*/
+.showcase {
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	border: solid;
+	border-color: black;
+	position: center;
+}
+
+.index-photo {
+	height: 100px;
+	width: 100px;
+	border-radius: 20%;
+	margin-left: -(X/2)px;
+   margin-top: -(Y/2)px;
+}
+
+.main-div {
+	text-align: center;
+	background-size: cover !important;
+}

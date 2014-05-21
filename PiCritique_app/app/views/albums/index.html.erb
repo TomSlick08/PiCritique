@@ -1,8 +1,9 @@
 <h1> Index of All Albums </h1> 
 
+<div class="main-div">
 <% @albums.each do |album| %>
 <p><%= album.name %>:</p>
-<img src="<%= album.cover_photo %>"> 
+<a href="albums/<%=album.id%>"><img src="<%= album.cover_photo %>" class="index-photo"></a> 
 </br>
 <%= link_to 'Edit Album', album_photos_path(album) %>
 </br>
@@ -13,3 +14,4 @@
 <%= link_to 'Home', root_path %>
 <%= link_to 'Logout', logout_path %>
 <%= link_to 'Create a New Album', new_album_path %>
+</div>

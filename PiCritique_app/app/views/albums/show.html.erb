@@ -1,10 +1,11 @@
 <h1><%=@album.name %></h1>
+
+<div class="main-div">
 <p> Must be logged in to upload an album or leave a comment </p>
 
 <% @album.photos.each do |photo|%>
-<img src="<%=photo.content%>"> </img></br>
+<img src="<%=photo.content%>"> </br>
 <%= photo.caption %>
-
 <%end%>
 
 <%= link_to 'Add Photo', new_album_photo_path(@album) %></br>
@@ -14,3 +15,5 @@
 <%= link_to 'Edit An Album', edit_album_path(@album) %></br>
 <%= link_to 'Home', root_path %></br>
 <%= link_to 'Logout', logout_path %>
+
+</div>
