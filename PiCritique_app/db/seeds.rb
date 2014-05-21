@@ -8,3 +8,5 @@
 
 user_1 = User.create(id: 1, name: 'tommyt', password: 'tommy08', admin: true)
 Album.create(name: 'TestAlbum', user_id: user_1.id)
+
+
