@@ -20,7 +20,7 @@ body {
 
 header {
 	background: black;
-	height: 100px;
+	height: 140px;
 	width: 100%;
 	background-size: cover !important;
 }
@@ -40,10 +40,12 @@ header {
 	border-radius: 25%;
 }
 
-.banner:h1{
-	font-color: white;
+.banner {
+	color: white;
 	font-size: 100px;
 	font-family: Impact;
+	text-align: center;
+	position: center;
 }
 
 /*html, body {
