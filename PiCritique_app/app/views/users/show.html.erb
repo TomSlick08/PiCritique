@@ -7,7 +7,7 @@
 <h2> <%= @user.name %>'s Albums:</h2>
 	<% @albums.each do |album| %>
 
-		<a href ="/albums/<%=album.id%>/photos"> <img src="<%= album.cover_photo %>" class= "index-photo"> </a>
+		<a href ="/albums/<%=album.id%>"> <img src="<%= album.cover_photo %>" class= "index-photo"> </a>
 	<% end %>
 </br>
 </br>

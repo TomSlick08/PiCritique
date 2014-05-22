@@ -6,8 +6,8 @@
 <body>
     <% @users.each do |user| %>
         <p><%= user.name %></p></br>
-        <img src="<%= user.avatar %> class="index-photo"></img></br>
-        <%= link_to 'View Profile', user_path(user) %>
+        <img src="<%= user.avatar %>" class="index-photo"></img></br>
+        <%= link_to 'View Profile', user_path(user) %></br>
     <% end %>
 
     <%= link_to 'Logout', logout_path %>

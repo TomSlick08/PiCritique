@@ -1,12 +1,13 @@
 <h1><%=@album.name %></h1>
 
 <div class="main-div">
-<p> Must be logged in to upload an album or leave a comment </p>
-
+<!-- <p> Must be logged in to upload an album or leave a comment </p> --><div id="photo-block">
 <% @album.photos.each do |photo|%>
-<img src="<%=photo.content%>"> </br>
-<%= photo.caption %>
-<%end%>
+<a href ="/albums/<%= photo.album_id%>/photos/<%=photo.id%>"> <img src="<%= photo.content%>" class="index-photo"> 
+<%# photo.caption %> </a>
+<% end %>
+</br>
+</div>
 
 <%= link_to 'Add Photo', new_album_photo_path(@album) %></br>
 <%= link_to 'Photos for This Album', album_photos_path(@album) %></br>

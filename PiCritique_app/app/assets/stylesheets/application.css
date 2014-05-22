@@ -14,6 +14,27 @@
  *= require_self
  */
 
+#photo-block {
+	margin: 0 auto;
+	float: center;
+}
+
+#intro-div {
+	text-align: center;
+	border-radius: 25px;
+	background-color: black;
+	width: 50%;
+	margin: 0 auto;
+	height: 30%;
+}
+
+#site-description {
+	text-align: center;
+	font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+	font-size: 18px;
+	color: white;
+}
+
 body {
 	background: url(http://geewall.com/mmc_uploads/5154-light-gray-gradient-1920-1200-wallpapers.jpg);
 }
@@ -30,8 +51,8 @@ header {
 }
 
 .thumbnail {
-	height: 30px;
-	width: 30px;
+	height: 50px;
+	width: 50px;
 	margin: 0 auto;
 }
 

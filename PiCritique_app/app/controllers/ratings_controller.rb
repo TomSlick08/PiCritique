@@ -17,11 +17,11 @@ class RatingsController < ApplicationController
 			@rating = Rating.create(rating_params)
 			respond_to do |format|
 						if @rating.save
-						@rating.photo_id = params[:photo_id]
-						@rating.save
-						format.html { redirect_to @photo, notice: 'Your rating has been saved.' }
-						format.js { }
-						format.json { render json: @rating.to_json }
+							@rating.photo_id = params[:photo_id]
+							@rating.save
+							format.html { redirect_to @photo, notice: 'Your rating has been saved.' }
+							format.js { }
+							format.json { render json: @rating.to_json }
 						else 
 							format.html { render action: "new"}
 							format.json { render json: @rating.errors, status: :unprocessable_entity}

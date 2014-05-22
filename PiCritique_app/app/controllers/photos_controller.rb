@@ -8,6 +8,8 @@ class PhotosController < ApplicationController
 		def show 
 			@album = Album.find(params[:album_id])
 			@photo = Photo.find(params[:id])
+			@photo.album_id = params[:album_id]
+			@photo.save
 			@rating = Rating.new
 			# @ratings = Photo.ratings
 			# @albums = @user.albums
@@ -22,8 +24,10 @@ class PhotosController < ApplicationController
 
 		def create
 			@photo = Photo.new(photo_params)
+			@photo.album_id = params[:album_id]
+			@photo.save
 			if @photo.save
-				redirect_to '/albums/' + params[:album_id] + '/photos'
+				redirect_to '/albums/' + params[:album_id] #+ '/photos/' + params[:id]
 			else
 				render 'new'
 			end

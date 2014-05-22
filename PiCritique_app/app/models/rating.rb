@@ -1,6 +1,27 @@
 class Rating < ActiveRecord::Base 
 	belongs_to :photo
-	validates :setting, :numericality => {:only_integer => true}
+	# Need to come back and dry this up.
+	validates_numericality_of :setting, :only_integer => true,
+    :greater_than_or_equal_to => 1,
+    :less_than_or_equal_to => 10,
+    :message => "can only be whole number between 1 and 10."
+  validates_numericality_of :hotness, :only_integer => true,
+    :greater_than_or_equal_to => 1,
+    :less_than_or_equal_to => 10,
+    :message => "can only be whole number between 1 and 10."
+  validates_numericality_of :originality, :only_integer => true,
+    :greater_than_or_equal_to => 1,
+    :less_than_or_equal_to => 10,
+    :message => "can only be whole number between 1 and 10."
+  validates_numericality_of :style, :only_integer => true,
+    :greater_than_or_equal_to => 1,
+    :less_than_or_equal_to => 10,
+    :message => "can only be whole number between 1 and 10."
+  validates_numericality_of :attitude, :only_integer => true,
+    :greater_than_or_equal_to => 1,
+    :less_than_or_equal_to => 10,
+    :message => "can only be whole number between 1 and 10."
+
 	# need to validate the numericality of the rating (to be less than or equal
 	#  to 10 and greater than 0)
 	
