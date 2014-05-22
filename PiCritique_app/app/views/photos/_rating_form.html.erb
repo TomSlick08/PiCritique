@@ -1,8 +1,8 @@
-<%= form_for (@rating, remote: true) do |f| %>
+<%= form_for([@album, @photo, @rating], remote: true) do |f| %>
 
 <div class="field">
     <%= f.label :setting %><br>
-    <%= f.file_field :setting %>
+    <%= f.text_field :setting %>
   </div>    
   <div class="field">
     <%= f.label :hotness %><br>
@@ -12,6 +12,7 @@
     <%= f.label :originality %><br>
     <%= f.text_field :originality %>
   </div>
+  
   <div class="field">
     <%= f.label :style %><br>
     <%= f.text_field :style %>
@@ -20,7 +21,7 @@
     <%= f.label :attitude %><br>
     <%= f.text_field :attitude %>
   </div>
-  <div class="actions">
+  <div id="submit-ratings">
     <%= f.submit %>
   </div>
 

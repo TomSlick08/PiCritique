@@ -20,3 +20,6 @@ $(document).ready(function() {
 		createComment();
 	});
 });
+
+// $('#new_rating').submit(displayRatings);
+	

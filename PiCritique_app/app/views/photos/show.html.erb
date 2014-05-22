@@ -4,15 +4,22 @@
 
 <%# render 'comment_input' %>
 
-<p>
-	<%# render 'rating_form' %>
+<p id="rating-input">
+	<%= render 'rating_form' %>
 </p>
+
+<div id="submitted-rating">
+
+</div>
+
+<div id="ratings-content">
+	<p>Average Rating for this Photo: <%= @photo.average_rating%> </p>
+</div>
 
 <div id ="comment-div">
 	<p>Leave Feedback:</p>
 	<textarea id= "comment-input">
-	</textarea></br>
-		<button id="submit-comment"> 
+	</textarea></br> <button id="submit-comment">
 		<p>Post Comment </p>
 	</button>
 	<% @photo.comments.each do |comment| %>

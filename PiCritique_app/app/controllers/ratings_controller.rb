@@ -10,18 +10,23 @@ class RatingsController < ApplicationController
 		end
 
 		def new 
-			@ratings = Rating.new()
+			@rating = Rating.new()
 		end
 
 		def create
 			@rating = Rating.create(rating_params)
-			def create
-			@rating = Rating.create(setting: params[:setting], hotness: params[:hotness], originality: params[:originality], style: params[:style], attitude: params[:attitude])
 			respond_to do |format|
-				format.html { redirect_to '/' }
-				format.js { }
-				format.json { render json: @rating.to_json }
-			end
+						if @rating.save
+						@rating.photo_id = params[:photo_id]
+						@rating.save
+						format.html { redirect_to @photo, notice: 'Your rating has been saved.' }
+						format.js { }
+						format.json { render json: @rating.to_json }
+						else 
+							format.html { render action: "new"}
+							format.json { render json: @rating.errors, status: :unprocessable_entity}
+						end
+				end
 		end
 
 		def destroy 
@@ -29,8 +34,8 @@ class RatingsController < ApplicationController
 				@rating.destroy
 		end
 
-		# private 
-		# def rating_params
-		# 	params.require(:rating).permit(:setting, :hotness, :originality, :style, :attitude)
-		# end
+		private 
+		def rating_params
+			params.require(:rating).permit(:setting, :hotness, :originality, :style, :attitude)
+		end
 end

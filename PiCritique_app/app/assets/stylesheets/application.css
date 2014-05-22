@@ -44,7 +44,7 @@ header {
 	height: 30px;
 	width 20px;
 	border-radius: 25%;
-	text-align: center;
+	text-align: center;	
 }
 
 .banner {
@@ -69,6 +69,8 @@ header {
 	width: 100px;
 	border-radius: 20%;
 	position: center;
+	border: solid;
+	border-color: black;
 }
 
 .main-div {

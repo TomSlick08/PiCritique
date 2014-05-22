@@ -1,6 +1,6 @@
 class Rating < ActiveRecord::Base 
-	belongs_to: photo
-	
+	belongs_to :photo
+	validates :setting, :numericality => {:only_integer => true}
 	# need to validate the numericality of the rating (to be less than or equal
 	#  to 10 and greater than 0)
 	

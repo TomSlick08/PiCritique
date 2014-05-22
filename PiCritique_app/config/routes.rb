@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   resources :albums do 
-    resources :photos
+    resources :photos do
+      resources :ratings
+    end
   end
   
   resources :comments
